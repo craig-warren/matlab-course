@@ -59,4 +59,4 @@ Under the terms of the license we would be grateful if you would cite the follow
 Acknowledgments
 ---------------
 
-An Interactive Introduction to MATLAB makes use of the `classicthesis template <http://www.miede.de/#classicthesis> for LaTeX, which was created by Prof. Dr.-Ing. André Miede.
+An Interactive Introduction to MATLAB makes use of the `classicthesis template <http://www.miede.de/#classicthesis>`_ for LaTeX, which was created by Prof. Dr.-Ing. André Miede.
