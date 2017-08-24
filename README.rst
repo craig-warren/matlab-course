@@ -46,13 +46,13 @@ Development of this course
 --------------------------
 
 The development of this course was funded through The Edinburgh Fund Small Project Grant which is part of `The University of Edinburgh Campaign <http://www.edinburghcampaign.com/alumni-giving/grants>`_
-The material for this course was developed by Dr. Tina Düren, Dr. Antonis Giannopoulos, Dr. Guillermo Rein, Dr. John Thompson, and Dr. Craig Warren. The original screencasts created by Dr. Craig Warren. Revised  screencasts (to reflect an update to the MATLAB User Interface - MATLAB R2013a) were made by Joe Burchell.
+The material for this course was developed by `Prof. Tina Düren <http://www.bath.ac.uk/chem-eng/people/duren/>`_, `Dr. Antonis Giannopoulos <https://www.eng.ed.ac.uk/about/people/dr-antonis-giannopoulos>`_, `Prof. Guillermo Rein <https://www.imperial.ac.uk/people/g.rein>`_, `Prof. John Thompson <https://www.eng.ed.ac.uk/about/people/prof-john-thompson>`_, and `Dr. Craig Warren <https://www.northumbria.ac.uk/about-us/our-staff/w/craig-warren/>`_. The original screencasts created by Dr. Craig Warren. Revised  screencasts (to reflect an update to the MATLAB User Interface - MATLAB R2013a) were made by Joe Burchell.
 
 License and usage of this course
 --------------------------------
 
 An interactive introduction to MATLAB is licensed under the `Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License <https://creativecommons.org/licenses/by-nc-sa/3.0/>`_
 
-If you use this course material we would be grateful if you would cite the following paper:
+Under the terms of the license we would be grateful if you would cite the following paper:
 
 * Warren, C. (2014). MATLAB for Engineers: Development of an Online, Interactive, Self-study Course. Engineering Education, 9(1), 86-93.
