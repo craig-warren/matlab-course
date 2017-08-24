@@ -50,7 +50,7 @@ The material for this course was developed by `Prof. Tina Düren <http://www.ba
 License and usage of this course
 --------------------------------
 
-An Interactive Introduction to MATLAB is licensed under the `Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License <https://creativecommons.org/licenses/by-nc-sa/3.0/>`_
+This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. To view a copy of this license, visit `http://creativecommons.org/licenses/by-nc-sa/3.0/ <http://creativecommons.org/licenses/by-nc-sa/3.0/>`_ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
 Under the terms of the license we would be grateful if you would cite the following paper:
 
