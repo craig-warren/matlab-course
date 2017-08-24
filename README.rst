@@ -1,5 +1,5 @@
 *************************************
-An interactive introduction to MATLAB
+An Interactive Introduction to MATLAB
 *************************************
 
 About the course
@@ -39,8 +39,7 @@ There are a huge number of textbooks published on the subject of MATLAB! A user-
 There are a couple of further textbooks listed in the Bibliography section at the end of this document. However, throughout this course and beyond, the most important source of help is the documentation built-in to MATLAB. It is easily searchable, and because MATLAB contains many built-in functions it is worth checking out before starting to write your own code.
 
 * `MATLAB help documentation <http://www.mathworks.com/access/helpdesk/help/techdoc/>`_ Accessed through the help menu in MATLAB, or online.
-* `MATLAB Central <http://www.mathworks.co.uk/matlabcentral/>`_ An open exchange for users, with code snippets, help forums
-and blogs. A great place to search for specific help!
+* `MATLAB Central <http://www.mathworks.co.uk/matlabcentral/>`_ An open exchange for users, with code snippets, help forums and blogs. A great place to search for specific help!
 
 Development of this course
 --------------------------
@@ -51,8 +50,13 @@ The material for this course was developed by `Prof. Tina Düren <http://www.ba
 License and usage of this course
 --------------------------------
 
-An interactive introduction to MATLAB is licensed under the `Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License <https://creativecommons.org/licenses/by-nc-sa/3.0/>`_
+An Interactive Introduction to MATLAB is licensed under the `Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License <https://creativecommons.org/licenses/by-nc-sa/3.0/>`_
 
 Under the terms of the license we would be grateful if you would cite the following paper:
 
 * Warren, C. (2014). MATLAB for Engineers: Development of an Online, Interactive, Self-study Course. Engineering Education, 9(1), 86-93.
+
+Acknowledgments
+---------------
+
+An Interactive Introduction to MATLAB makes use of the `classicthesis template <http://www.miede.de/#classicthesis> for LaTeX, which was created by Prof. Dr.-Ing. André Miede.
