@@ -21,7 +21,7 @@ How do I use this document?
 ---------------------------
 
 This document contains different elements designed to make your learning experience as smooth as possible. To benefit the most from these elements you are encouraged to use the online PDF version of this document. One of the first things you’ll notice is that this document contains many links: those in red indicate a link to online material, and those in blue indicate a link to another section of this document.
-A key part of this course are the screencasts, which are `video screen captures <http://en.wikipedia.org/wiki/Screencast>`_ In this document screencasts are indicated by a link in a blue box with a clapperboard icon. Clicking on a link to a screencast will take you to the YouTube video where you will see the opening image to a University of Edinburgh screencast presented in the video player. Watching and learning from the screencasts are an essential part of the course and will help you develop your skills in MATLAB more quickly.
+A key part of this course are the screencasts, which are `video screen captures <http://en.wikipedia.org/wiki/Screencast>`_. In this document screencasts are indicated by a link in a blue box with a clapperboard icon. Clicking on a link to a screencast will take you to the YouTube video where you will see the opening image to a University of Edinburgh screencast presented in the video player. Watching and learning from the screencasts are an essential part of the course and will help you develop your skills in MATLAB more quickly.
 
 You will also notice two other types of blue box environments in this document: one is for Hints and Tips (with a question mark icon), and the other contains exercises that you should complete
 (with an inkwell icon).
@@ -32,7 +32,7 @@ bits of code. Very often you will be required to copy and paste the listing into
 Sources of help and further reading
 -----------------------------------
 
-There are a huge number of textbooks published on the subject of MATLAB! A user-friendly textbook that provides a good intro- duction to MATLAB is:
+There are a huge number of textbooks published on the subject of MATLAB! A user-friendly textbook that provides a good introduction to MATLAB is:
 
 * Gilat, A. (2008). MATLAB: An Introduction With Applications. John Wiley & Sons, Inc., 3rd edition.
 
@@ -44,8 +44,8 @@ There are a couple of further textbooks listed in the Bibliography section at th
 Development of this course
 --------------------------
 
-The development of this course was funded through The Edinburgh Fund Small Project Grant which is part of `The University of Edinburgh Campaign <http://www.edinburghcampaign.com/alumni-giving/grants>`_
-The material for this course was developed by `Prof. Tina Düren <http://www.bath.ac.uk/chem-eng/people/duren/>`_, `Dr. Antonis Giannopoulos <https://www.eng.ed.ac.uk/about/people/dr-antonis-giannopoulos>`_, `Prof. Guillermo Rein <https://www.imperial.ac.uk/people/g.rein>`_, `Prof. John Thompson <https://www.eng.ed.ac.uk/about/people/prof-john-thompson>`_, and `Dr. Craig Warren <https://www.northumbria.ac.uk/about-us/our-staff/w/craig-warren/>`_. The original screencasts created by Dr. Craig Warren. Revised  screencasts (to reflect an update to the MATLAB User Interface - MATLAB R2013a) were made by Joe Burchell.
+The development of this course was funded through The Edinburgh Fund Small Project Grant which is part of `The University of Edinburgh Campaign <http://www.edinburghcampaign.com/alumni-giving/grants>`_.
+The material for this course was developed by `Prof. Tina Düren <http://www.bath.ac.uk/chem-eng/people/duren/>`_, `Dr. Antonis Giannopoulos <https://www.eng.ed.ac.uk/about/people/dr-antonis-giannopoulos>`_, `Prof. Guillermo Rein <https://www.imperial.ac.uk/people/g.rein>`_, `Prof. John Thompson <https://www.eng.ed.ac.uk/about/people/prof-john-thompson>`_, and `Dr. Craig Warren <https://www.northumbria.ac.uk/about-us/our-staff/w/craig-warren/>`_. The original screencasts were created by Dr. Craig Warren. Revised  screencasts (to reflect an update to the MATLAB User Interface - MATLAB R2013a) were made by Joe Burchell.
 
 License and usage of this course
 --------------------------------
