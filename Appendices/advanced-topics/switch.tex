@@ -1,0 +1,26 @@
+**\chapter{Advanced Topic: The switch statement}\label{chap:switch}
+
+The \mcode{switch} statement in \mlab is similar to the \mcode{if}, \mcode{else}, and \mcode{elseif} statements, and provides a method of executing different bits of code dependent on which \mcode{case} is true. Typically you would use a \mcode{switch} statement in preference to \mcode{if}, \mcode{else}, and \mcode{elseif} statements if you have specific cases (values of a variable) to test. Listing~\ref{lst:switch_structure} presents the syntax of the \mcode{switch} statement. 
+\begin{lstlisting}[caption={Syntax of a \mcode{switch} statement},label=lst:switch_structure]
+switch **switch_expression**
+	case **case_expression1**
+		**statements**
+	case **case_expression2**
+		**statements**
+	case **case_expression3**
+		**statements**
+	...
+end
+\end{lstlisting}
+
+\subsubsection{Comments:}
+\begin{itemize}
+\item Line 1 contains the \mcode{switch} command followed by the expression to be compared to the various cases.
+\item Lines 2--7 contain the different cases and their corresponding statements to be executed.
+\item If the switch expression matches one of the case expressions then the statements underneath that \mcode{case} will be executed and the \mcode{switch} statement will end.
+\end{itemize}
+
+Listing~\ref{lst:switch_example} presents a simple example of the usage of a \mcode{switch} statement. \mlab has a built-in function called \mcode{computer} that returns a string of text corresponding to the operating system that you are running. By analysing this string you can print out some information about the operating system. Copy and paste the example into a new script file, and run it to see the results for yourself.
+
+\newpage
+\lstinputlisting[caption={\textit{computer\_test.m} - Script to test type of computer MATLAB is running on},label=lst:switch_example]{MATLAB-code/Document/computer_test.m}

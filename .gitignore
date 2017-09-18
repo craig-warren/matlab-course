@@ -1,0 +1,13 @@
+# Mac OS X
+.DS_Store
+
+# LaTeX
+*.aux
+*.bbl
+*.blg
+*.ex
+*.log
+*.lot
+*.out
+*.scast
+*.toc

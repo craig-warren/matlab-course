@@ -1,0 +1,55 @@
+\chapter{Advanced Topic: Vectorisation}\label{chap:vectorisation}
+
+To make your \mlab code run faster it is important to vectorise, where possible, the algorithms that you use. Where loops, especially nested loops, are being used, it is often possible to substitute a vector or matrix equivalent which will run much faster. 
+
+Listing~\ref{lst:vectorised_simple_before} presents a simple example of a \mcode{for} loop being used to calculate a series of voltages across different resistors, with a different current flowing in each resistor.
+\begin{lstlisting}[caption={Simple \mcode{for} loop to vectorise},label=lst:vectorised_simple_before]
+I=[2.35 2.67 2.78 3.34 2.10]; % Vector of currents
+R=[50 75 100 125 300]; % Vector of resistances
+for n=1:5
+    V(n)=I(n)*R(n); % Calculate voltage
+end
+\end{lstlisting}
+\graffito{Vectorise your loops to make your code run faster!}Listing~\ref{lst:vectorised_simple_after} presents a vectorised solution to the same problem, and indeed you may well have gone straight to the vectorised solution without considering use of a loop.
+\begin{lstlisting}[caption={Vectorised \mcode{for} loop},label=lst:vectorised_simple_after]
+I=[2.35 2.67 2.78 3.34 2.10]; % Vector of currents
+R=[50 75 100 125 300]; % Vector of resistances
+V=I.*R; % Calculate voltage
+\end{lstlisting}
+
+Listings~\ref{lst:vectorised_adv_before}--\ref{lst:vectorised_adv_after} present a more advanced example of vectorisation. A matrix of random numbers called \mcode{data} is generated and two nested \mcode{for} loops are used to iterate through every element in the matrix. An \mcode{if} statement is used to check to see if each element is less than 0.1, and if so that element is set to zero. Copy and paste the example into a new script file, and run it to see the results for yourself.
+\begin{lstlisting}[caption={Nested loops},label=lst:vectorised_adv_before]
+data=rand(8000,8000); % Generate some random data
+tic
+for i=1:size(data,1)
+	for j=1:size(data,2)
+		if data(i,j)<0.1 % Is data sample is less than 0.1?
+			data(i,j)=0; % Set data sample to zero
+		end
+	end
+end
+toc
+Elapsed time is 6.876476 seconds.
+\end{lstlisting}
+
+\subsubsection{Comments:}
+\begin{itemize}
+\item On Line 1 the \mcode{rand} function is used to generate a matrix, 8000 $\times$ 8000, of uniformly distributed random numbers in the interval $[0,1]$.
+\item On Line 2 and Line 10 the \mcode{tic} and \mcode{toc} commands are used to time how long the code took to execute. Line 11 lists the result.
+\end{itemize}
+
+The code in Listing~\ref{lst:vectorised_adv_before} can be vectorised to produce the code given in Listing~\ref{lst:vectorised_adv_after}.
+\begin{lstlisting}[caption={Vectorisation of nested loops},label=lst:vectorised_adv_after]
+data=rand(8000,8000);
+tic
+data(data<0.1)=0;
+toc
+Elapsed time is 0.927503 seconds.
+\end{lstlisting}
+
+\subsubsection{Comments:}
+\begin{itemize}
+\item On Line 3 the nested \mcode{for} loops have been replaced with a single line of vectorised code. \mcode{data<0.1} returns a matrix of 1's and 0's corresponding to values of \mcode{data} less than 0.1. The values of these elements are then set to 0.
+\item Line 5 lists the time taken to execute the vectorised code. A difference of approximately 5~seconds may not seem like much of a speed increase, but in complex \mlab scripts with lots of loops performing many iterations it is can be significant.
+\end{itemize}
+Listings~\ref{lst:vectorised_adv_before}--\ref{lst:vectorised_adv_after} are an extreme example of vectorisation, but clearly demonstrate that \mlab can execute vectorised code much faster than conventional loops.

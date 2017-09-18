@@ -1,0 +1,375 @@
+\chapter{Loops} \label{ch:loops}
+	
+Loops are another way of altering the flow of control in your program, and provide methods for repeatedly executing commands. You might want to repeat the same commands, changing the value of a variable each time, for a fixed number of iterations. Alternatively, you might want to repeat the same commands, changing the value of a variable each time, continually until a certain condition is reached. Two of the most common types of loops, \mcode{for} and \mcode{while}, will be examined in this chapter.
+
+\section{for loops}
+A \mcode{for} loop is used to repeat a command, or set of commands, a fixed number of times. Listing~\ref{lst:for_loop_syntax} shows the syntax of a \mcode{for} loop.
+\begin{lstlisting}[caption={Syntax of a \mcode{for} loop},label=lst:for_loop_syntax]
+for **variable = f:s:t**
+	**statements**
+end
+\end{lstlisting}
+
+\subsubsection{Comments:}
+\begin{itemize}
+\item Line 1 contains the \mcode{for} command, followed by the loop counter variable which is defined by an expression. \mcode{f} is the value of the loop counter on the first iteration of the loop, \mcode{s} is the step size or increment, and \mcode{t} is the value of the loop counter on the final iteration of the loop. As an example if the loop counter is defined by the expression \mcode{n = 0:5:15}, which\graffito{Refer to Chapter~\ref{ch:intro} if you need a refresher on ranges} means \mcode{n = [0 5 10 15]}, on the first iteration of the loop \mcode{n = 0}, on the second iteration \mcode{n = 5}, on the third iteration \mcode{n = 10}, and on the forth, and final, iteration \mcode{n = 15}.
+\item Line 2 contains the body of loop which can be a command or series of commands that will be executed on each iteration of the loop.
+\item Line 3 contains the \mcode{end} command which must always be used at the end of a loop to close it.
+\end{itemize}
+\addtolength{\parindent}{-4mm}
+\fcolorbox{myborderblue}{myblue}{%
+\begin{minipage}{\linewidth}
+\begin{minipage}{6mm}
+\includegraphics[scale=0.03]{Graphics/General/help_icon}
+\end{minipage}
+\textit{Indenting for readability} \\
+It is good practice to indent the body of loops for readability in your script files. \mlab will usually do this for you, but if not, highlight your code and choose \textit{Smart Indent} from the \textit{Text} menu in the Editor Window toolbar.
+\end{minipage}%
+}\\
+\addtolength{\parindent}{4mm}
+
+Listing~\ref{lst:for_loop_simple} gives an example of a simple \mcode{for} loop which displays the value of the variable \mcode{x}.
+\begin{lstlisting}[caption={Simple example of a \mcode{for} loop},label=lst:for_loop_simple]
+>> for x=1:1:9
+x
+end
+x =
+    1
+x =
+    2
+x =
+    3
+x =
+    4
+x =
+    5
+x =
+    6
+x =
+    7
+x =
+    8
+x =
+    9  
+\end{lstlisting}
+
+\subsubsection{Comments:}
+\begin{itemize}
+\item In Line 1 the loop counter variable, in this case \mcode{x}, is defined to start at 1 and count up in steps of 1 until 9.
+\item In Line 2 the body of the loop prints the value of the loop counter variable \mcode{x}.
+\item When the loop is executed, initially the value of 1 is assigned to \mcode{x}, and then the body of the loop is executed. The value of \mcode{x} is then incremented by 1, the body of the loop is executed again, and so on until \mcode{x} is 9. Whereupon, the body of the loop is executed for a final time and then the loop terminates.
+\item Lines 4--21 contain the results of running the \mcode{for} loop.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Screencast: The for loop
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\addtolength{\parindent}{-4mm}
+\fcolorbox{myborderblue}{myblue}{%
+\begin{minipage}{\linewidth}
+\begin{minipage}{6mm}
+\includegraphics[scale=0.03]{Graphics/General/screencast_icon}
+\end{minipage}
+\href{http://www.eng.ed.ac.uk/teaching/courses/matlab/unit05/for-loop.shtml}{\screencast{The for loop}}\\
+(http://www.eng.ed.ac.uk/teaching/courses/matlab/unit05/for-loop.shtml)
+\end{minipage}%
+}\\
+\addtolength{\parindent}{4mm}
+\vspace{5mm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Self Test Exercise: for loops
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\addtolength{\parindent}{-4mm}
+\begin{minipage}{\linewidth}
+\begin{minipage}{6mm}
+\includegraphics[scale=0.035]{Graphics/General/exercise_icon}
+\end{minipage}
+\textit{Self Test Exercise: for loops}
+\end{minipage}
+\addtolength{\parindent}{4mm}
+\\ Evaluate the following expressions without using \mlab. Check your answers with \mlab.
+\begin{enumerate}
+\item How many times will this code print \mcode{Hello World}?
+\begin{lstlisting}
+for a=0:50
+	disp('Hello World')
+end
+\end{lstlisting}
+
+\item How many times will this code print \mcode{Guten Tag Welt}?
+\begin{lstlisting}
+for a=-1:-1:-50
+	disp('Guten Tag Welt')
+end
+\end{lstlisting}
+
+\item How many times will this code print \mcode{Bonjour Monde}?
+\begin{lstlisting}
+for a=-1:1:50
+	disp('Bonjour Monde')
+end
+\end{lstlisting}
+
+\item How many times will this code print \mcode{Hola Mundo}?
+\begin{lstlisting}
+for a=10:10:50
+	for b=0:0.1:1
+		disp('Hola Mundo')
+	end
+end
+\end{lstlisting}
+\end{enumerate}
+%\textit{[Q1 51 times; Q2 50 times; Q3 Never; Q4 55 times]}
+
+Listing~\ref{lst:for_loop_sum} demonstrates an example of using a \mcode{for} loop to take the sum of a geometric series (the same example posed in Exercise 2, Question 8). 
+\lstinputlisting[caption={\textit{for\_loop\_sum.m} - Script to sum a geometric series using a \mcode{for} loop},label=lst:for_loop_sum]{MATLAB-code/Document/for_loop_sum.m}
+
+\subsubsection{Comments:}
+\begin{itemize}
+\item Line 15 contains the \mcode{input} command, which is used to get the number of terms to be summed from the user.
+\item On Line 16 a variable \mcode{my_sum} is created (and set to zero) to hold the sum of the geometric series. It is necessary to create any variables outside of loops before using them within loops.
+\item Lines 18--20 contain the \mcode{for} loop. The loop counter \mcode{m} counts in steps of one from zero until the number of terms specified by the user \mcode{n}.
+\item On Line 19 (the body of the loop) the new term in the sum \mcode{r^m} is added to the previous value of \mcode{my_sum} and this becomes the new value of \mcode{my_sum}.
+\item Lines 21--22 display the result of the summation. The \mcode{format} command is used to set the display to 15 digits instead of the default 4 digits so that the result of taking more terms in the summation can be seen.
+\end{itemize}
+
+\section{while loops}
+A \mcode{while} loop is similar to \mcode{for} loop in that it is used to repeat a command, or set of commands. Listing~\ref{lst:while_loop_syntax} shows the syntax of a \mcode{while} loop. The key difference between a \mcode{for} loop and a \mcode{while} loop is that the \mcode{while} loop will continue to execute until a specified condition becomes false. 
+\begin{lstlisting}[caption={Syntax of a \mcode{while} loop},label=lst:while_loop_syntax]
+while **condition is true**
+	**statements**
+end
+\end{lstlisting}
+
+\subsubsection{Comments:}
+\begin{itemize}
+\item Line 1 contains the \mcode{while} command, followed by a condition \eg\ \mcode{x>10}. This means as long as the condition, \mcode{x>10}, remains true the loop will continually repeat.
+\item Line 2 contains the body of loop which can be a command or series of commands that will be executed on each iteration of the loop.
+\item Line 3 contains the \mcode{end} command which must always be used at the end of a loop to close it.
+\end{itemize}
+
+Listing~\ref{lst:while_loop_simple} gives an example of a simple \mcode{while} loop which displays the value of the variable \mcode{x}.
+\begin{lstlisting}[caption={Simple example of a \mcode{while} loop},label=lst:while_loop_simple]
+>> x=1;
+>> while x<10
+x
+x=x+1;
+end
+x =
+    1
+x =
+    2
+x =
+    3
+x =
+    4
+x =
+    5
+x =
+    6
+x =
+    7
+x =
+    8
+x =
+    9	
+\end{lstlisting}
+
+\subsubsection{Comments:}
+\begin{itemize}
+\item Line 1 assigns the value of 1 to the variable \mcode{x}. Notice this is outside of the \mcode{while} loop. If you don't do this you will get an error because you are testing whether \mcode{x<10} but \mcode{x} has never been defined. \graffito{Remember to define variables you use in loops before you start the loops themselves.}
+\item In Line 2 the condition, \mcode{x<10}, is specified. In this case the loop will continue to repeat as long as \mcode{x} is less than 10. As soon as \mcode{x} is equal to 10 execution of the loop is stopped.
+\item Lines 3--4 contain the body of the loop, in this case the value of the loop counter variable \mcode{x} is printed. Then the value of \mcode{x} is incremented by 1. The value of \mcode{x} must be explicitly incremented otherwise \mcode{x} will always be equal to 1, the condition \mcode{x<10} will always be true, and the loop will therefore execute continuously.
+\item Lines 6--23 contain the results of running the \mcode{while} loop.
+\end{itemize}
+
+\addtolength{\parindent}{-4mm}
+\fcolorbox{myborderblue}{myblue}{%
+\begin{minipage}{\linewidth}
+\begin{minipage}{6mm}
+\includegraphics[scale=0.03]{Graphics/General/help_icon}
+\end{minipage}
+\textit{Breaking out of a loop} \\
+If you end up stuck in an infinitely repeating loop use CTRL + C to force \mlab to break out of the loop. However, under certain conditions you may want your code to break out of a loop before it is finished. To do this you can use the \mcode{break} command. Statements in your loop after the \mcode{break} command will not be executed.
+\end{minipage}%
+}\\
+\addtolength{\parindent}{4mm}
+\vspace{5mm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Screencast: The while loop
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\addtolength{\parindent}{-4mm}
+\fcolorbox{myborderblue}{myblue}{%
+\begin{minipage}{\linewidth}
+\begin{minipage}{6mm}
+\includegraphics[scale=0.03]{Graphics/General/screencast_icon}
+\end{minipage}
+\href{http://www.eng.ed.ac.uk/teaching/courses/matlab/unit05/while-loop.shtml}{\screencast{The while loop}}\\
+(http://www.eng.ed.ac.uk/teaching/courses/matlab/unit05/while-loop.shtml)
+\end{minipage}%
+}\\
+\addtolength{\parindent}{4mm}
+\vspace{5mm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Self Test Exercise: while loops
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\addtolength{\parindent}{-4mm}
+\begin{minipage}{\linewidth}
+\begin{minipage}{6mm}
+\includegraphics[scale=0.035]{Graphics/General/exercise_icon}
+\end{minipage}
+\textit{Self Test Exercise: while loops}
+\end{minipage}
+\addtolength{\parindent}{4mm}
+\\ Evaluate the following expressions without using \mlab. Check your answers with \mlab.
+\begin{enumerate}
+\item How many times will this code print \mcode{Hello World}?
+\begin{lstlisting}
+n = 10;
+while n > 0
+	disp('Hello World')
+	n = n - 1;
+end
+\end{lstlisting}
+
+\item How many times will this code print \mcode{Hello World}?
+\begin{lstlisting}
+n = 1;
+while n > 0
+	disp('Hello World')
+	n = n + 1;
+end
+\end{lstlisting}
+
+\item What values will this code print?
+\begin{lstlisting}
+a = 1
+while a < 100
+	a = a*2
+end
+\end{lstlisting}
+
+\newpage
+\item What values will this code print?
+\begin{lstlisting}
+a = 1;
+n = 1;
+while a < 100
+	a = a*n
+	n = n + 1;
+end
+\end{lstlisting}
+\end{enumerate}
+%\textit{[Q1 10 times; Q2 Infinitely; Q3 a=1,2,4,8,16,32,64,128; Q4 a=1,2,6,24,120]}
+
+Listing~\ref{lst:while_loop_sum} demonstrates an example of using a \mcode{while} loop to take the sum of a geometric series (the same example posed in Exercise 2, Question 8). Compare Listings~\ref{lst:for_loop_sum} and \ref{lst:while_loop_sum}.
+\lstinputlisting[caption={\textit{while\_loop\_sum.m} - Script to sum a geometric series using a \mcode{while} loop},label=lst:while_loop_sum]{MATLAB-code/Document/while_loop_sum.m}
+
+\subsubsection{Comments:}
+\begin{itemize}
+\item Line 18 contains a variable \mcode{m} (defined outside of the loop) which is used as a loop counter.
+\item Lines 19--22 contain the \mcode{while} loop. The condition for the loop to execute is that the value of the loop counter \mcode{m} must be less than or equal to the number of terms to be summed \mcode{n}. When this condition becomes false the loop will terminate.
+\item On Line 20 the summation is performed, and on Line 21 the loop counter is incremented.
+\end{itemize}
+
+\vspace{5mm}
+
+\addtolength{\parindent}{-4mm}
+\fcolorbox{myborderblue}{myblue}{%
+\begin{minipage}{\linewidth}
+\begin{minipage}{6mm}
+\includegraphics[scale=0.03]{Graphics/General/help_icon}
+\end{minipage}
+\textit{Which loop to use: \mcode{for} or \mcode{while}?} \\
+Well it depends on the problem! Several of the code listings in this chapter have demonstrated that the same problem can be solved using either a \mcode{for} or \mcode{while} loop.
+\end{minipage}%
+}\\
+\addtolength{\parindent}{4mm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Exercise 8: Loops
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\addtolength{\parindent}{-4mm}
+\fcolorbox{myborderblue}{myblue}{%
+\begin{minipage}{\linewidth}
+\begin{minipage}{6mm}
+\includegraphics[scale=0.035]{Graphics/General/exercise_icon}
+\end{minipage}
+\exercise{\textit{Exercise 8: Loops}}\\
+Write your own scripts to perform the following tasks:
+\begin{enumerate}
+\item \begin{enumerate}
+	  \item A \mcode{for} loop that multiplies all even numbers from 2 to 10.
+	  \item A \mcode{while} loop that multiplies all even numbers from 2 to 10.
+	  \end{enumerate}
+\item \begin{enumerate}
+	  \item A \mcode{for} loop that assigns the values 10, 20, 30, 40, and 50 to a vector.
+	  \item A \mcode{while} loop that assigns the values 10, 20, 30, 40, and 50 to a vector.
+	  \item Is there a simpler way to do this avoiding loops?
+	  \end{enumerate}
+\item Given the vector \mcode{x=[1 8 3 9 0 1]} use a \mcode{for} loop to:
+\begin{enumerate}
+\item Add up the values of all elements in \mcode{x}.
+\item Compute the cumulative sum, i.e $1,9,12,21,21,22$, of the elements in \mcode{x}.
+\end{enumerate}
+You can check your results using the built-in functions \mcode{sum} and \mcode{cumsum}.
+\item The factorial of a non-negative integer is defined as:
+\begin{equation*}
+n! = n \cdot (n - 1) \cdot (n - 2) \cdot \mathellipsis \cdot 1,
+\end{equation*}
+where $n!=1$ when $n=0$. For example, $5! = 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1$ which is 120. 
+
+Use a \mcode{for} loop to compute and print factorials. You should prompt the user for a non-negative integer and check it is indeed non-negative. There is a built-in function called \mcode{factorial}, therefore you should use a different name for your script to avoid any confusion.
+\item Use a \mcode{while} loop to determine and display the number of terms that it takes for the series,
+\begin{equation*}
+S_N = \sum_{n=1}^{N}\frac{1}{n^2},
+\end{equation*}
+to converge to within 0.01\% of its exact value, which is $S_\infty = \frac{\pi^2}{6}$.	  
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Screencast: Exercise 8 Solutions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{minipage}{6mm}
+\includegraphics[scale=0.03]{Graphics/General/screencast_icon}
+\end{minipage}
+\href{http://www.eng.ed.ac.uk/teaching/courses/matlab/unit05/Ex8-Solutions.shtml}{\screencast{Exercise 8 Solutions}}\\
+(http://www.eng.ed.ac.uk/teaching/courses/matlab/unit05/Ex8-Solutions.shtml)
+\end{minipage}%
+}\\
+\addtolength{\parindent}{4mm}
+
+\vspace{5mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Reference to additional exercises
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\addtolength{\parindent}{-4mm}
+\fcolorbox{myborderblue}{myblue}{%
+\begin{minipage}{\linewidth}
+\begin{minipage}{6mm}
+\includegraphics[scale=0.035]{Graphics/General/exercise_icon}
+\end{minipage}
+\textit{Additional Exercises}\\
+You should now attempt questions from Chapter~\ref{sect:loops}. 
+\end{minipage}%
+}\\
+\addtolength{\parindent}{4mm}
+
+\vspace{5mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Reference to Advanced Topic: Vectorisation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\addtolength{\parindent}{-4mm}
+\fcolorbox{myborderblue}{myblue}{%
+\begin{minipage}{\linewidth}
+\begin{minipage}{6mm}
+\includegraphics[scale=0.035]{Graphics/General/help_icon}
+\end{minipage}
+\textit{Advanced Topic}\\
+If you are interested, read about vectorisation in Appendix~\ref{chap:vectorisation}. 
+\end{minipage}%
+}\\
+\addtolength{\parindent}{4mm}

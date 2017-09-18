@@ -45,6 +45,7 @@ Development of this course
 --------------------------
 
 The development of this course was funded through The Edinburgh Fund Small Project Grant which is part of `The University of Edinburgh Campaign <http://www.edinburghcampaign.com/alumni-giving/grants>`_.
+
 The material for this course was developed by `Prof. Tina Düren <http://www.bath.ac.uk/chem-eng/people/duren/>`_, `Dr. Antonis Giannopoulos <https://www.eng.ed.ac.uk/about/people/dr-antonis-giannopoulos>`_, `Prof. Guillermo Rein <https://www.imperial.ac.uk/people/g.rein>`_, `Prof. John Thompson <https://www.eng.ed.ac.uk/about/people/prof-john-thompson>`_, and `Dr. Craig Warren <https://www.northumbria.ac.uk/about-us/our-staff/w/craig-warren/>`_. The original screencasts were created by Dr. Craig Warren. Revised  screencasts (to reflect an update to the MATLAB User Interface - MATLAB R2013a) were made by Joe Burchell.
 
 License and usage of this course
