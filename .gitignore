@@ -2,12 +2,15 @@
 .DS_Store
 
 # LaTeX
+Intro-to-MATLAB-blx.bib
 *.aux
 *.bbl
 *.blg
 *.ex
+*.gz
 *.log
 *.lot
 *.out
 *.scast
 *.toc
+*.xml
